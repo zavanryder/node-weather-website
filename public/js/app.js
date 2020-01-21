@@ -1,4 +1,4 @@
-console.log("Public fuckin' JavaScript!")
+console.log("Public fucking JavaScript!")
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
