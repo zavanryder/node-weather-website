@@ -9,7 +9,7 @@ const forecast = (lat, lon, callback) => {
             callback('Unable to find location, asshole.', undefined)
         } else {
             callback(undefined, body.daily.data[0].summary + '  Hey asshole, it is currently ' + body.currently.temperature 
-            + ' degrees with ' + body.currently.precipProbability * 100 + '% chance of fuckin rain.  The high temperature is ' 
+            + ' degrees with ' + body.currently.precipProbability * 100 + '% chance of rain.  The high temperature is ' 
             + body.daily.data[0].temperatureHigh + '.  The low temperature is ' + body.daily.data[0].temperatureLow)
         }
     })

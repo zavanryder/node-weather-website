@@ -23,23 +23,23 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index',{
-        title: 'Weather fuckin app',
-        name: 'Yo Fuckin Mama'
+        title: 'Weather App',
+        name: 'Zavan'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about',{
-        title: 'About Me Mofo',
-        name: 'Yo Fuckin Mama, Again'
+        title: 'About Me',
+        name: 'Zavan'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help',{
-        message: 'HERE IS MY MESSAGE.  FUCK OFF. AND HELP.',
+        message: 'HERE IS THE MESSAGE: HELLO.',
         title: 'HELP',
-        name: 'Yo Fuckin Mama, Again'
+        name: 'Also Zavan'
     })
 })
 
@@ -47,7 +47,7 @@ app.get('/weather', (req, res) => {
 
     if (!req.query.address) {
         return res.send({
-            error: 'You must provice an address to get a forecast, idiot.'
+            error: 'You must provice an address to get a forecast.'
         })
         
     }
@@ -72,17 +72,17 @@ app.get('/weather', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render('404',{
-        areaMessage: 'NO HELP PAGE FOUND, IDIOT!',
+        areaMessage: 'NO HELP PAGE FOUND',
         title: 'HELP ME!',
-        name: 'Yo Fuckin Mama, Again'
+        name: 'Also Zavan'
     })
 })
 
 app.get('*', (req, res) => {
     res.render('404',{
-        areaMessage: 'PAGE NOT FOUND, MORON!',
+        areaMessage: 'PAGE NOT FOUND',
         title: 'HELP ME!',
-        name: 'Yo Fuckin Mama, Again'
+        name: 'Zavan'
     })
 })
 
